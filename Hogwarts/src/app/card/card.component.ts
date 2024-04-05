@@ -22,6 +22,7 @@ export class CardComponent {
     "Charms" : "#0000FF" ,
   
   }
+  
   getColorForItem(item: string): string {
     return this.colorMap[item] || '#ffffff'; 
   }

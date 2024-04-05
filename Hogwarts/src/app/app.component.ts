@@ -22,6 +22,7 @@ export class AppComponent {
   teachers: Person[] = [];
   students: Person[] = [];
 
+  
   constructor(private hogwartService: HogwartService) { }
 
   ngOnInit(): void {
@@ -45,8 +46,21 @@ export class AppComponent {
             return a.firstName > b.firstName ? 1 : -1;
           }
         });
+        this.students.forEach ((student) => {
+          const suffixes = ["First Year", "Second Year", "Third Year"] ;
+          const arrival = new Date(student.arrivalDate) ; 
+          const current = new Date("12/11/1991") ; 
+          const difference = current.getFullYear() - arrival.getFullYear() ; 
+          student.arrivalDate = (difference) <= 2  ? suffixes[difference] : "Graduated" ; 
+
+        })
+        
+
         console.log(this.teachers);
       }
     );
   }
+
+
+  
 }

@@ -2,12 +2,12 @@
 
 <div class="card-header">
     <h3 class = "name">{{person.firstName + person.lastName}}</h3>
-    <div>
-        <span [ngStyle]="{'background-color': getColorForItem(person.isTeacher ? person.assignment : person.house)}" class="subject">
+    <div [ngStyle]="{'background-color': getColorForItem(person.isTeacher ? person.assignment : person.house)}" class="subject">
+        <span >
           {{ person.isTeacher ? person.assignment : person.house }}
         </span>
       </div>
-      </div>
+</div>
 <div class="card-body">
     <p class = "description"> {{person.description}} </p>
 </div>

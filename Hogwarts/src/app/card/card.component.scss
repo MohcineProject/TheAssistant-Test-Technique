@@ -3,21 +3,29 @@
     padding: 1rem ;
     margin: 1.5rem 0rem ;
     box-shadow:  0px 0px 2px 1px rgba(0, 0, 0, 0.087) ;
-    width: 70%;
-    min-height: min-content;
+    width: 80%;
+    min-width: min-content;
     height: 80%;
     .card-header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+       
     .name {
         display: inline-block;
-        width: 60%;
+        width: 100%;
 
     }
     .subject{
         display : inline-block;
         background-color: #ff0000;
         border-radius: 20px;
+        justify-self: flex-end;
         color: #ffffff;
         padding: 0.5rem;
+        height: 30%;
+        width : 80% ;
+        text-align: center;
     }
     }
     .card-footer {
@@ -30,3 +38,13 @@
     }
 
 }
+
+@media screen and (max-width: 376px) {
+    .card-header {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center; /* Center the items horizontally */
+    }
+   
+    
+    }
