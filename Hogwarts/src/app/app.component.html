@@ -3,16 +3,32 @@
 <h2 class="main-title">Hogwarts</h2>
 </header>
 
+
+
 <div class="columns">
 
-<div class="teachers-column">
-<h3>Teachers</h3>
-<app-card></app-card>
-</div>
+  <div class="teachers-title">
+    <h3>Teachers</h3>
+  
+  </div>
+  
+  <ng-container *ngFor="let teacher of teachers" class="person-card">    
+  
+    <app-card class = "teacher" [person]="teacher" ></app-card>
+  
 
-<div class="students-column">
-<h3>Students</h3>
+
+</ng-container >  
+
+<div class="students-title">
+  <h3>Students</h3>
 </div>
+     <ng-container *ngFor="let student of students" class="person-card">
+      
+      <app-card class="student" [person]="student" ></app-card>
+    
+    </ng-container >  
+
 
 </div>
 <router-outlet />

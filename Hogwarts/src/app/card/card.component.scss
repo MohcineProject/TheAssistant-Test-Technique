@@ -1,0 +1,32 @@
+.card{
+    border-radius: 0.5rem; 
+    padding: 1rem ;
+    margin: 1.5rem 0rem ;
+    box-shadow:  0px 0px 2px 1px rgba(0, 0, 0, 0.087) ;
+    width: 70%;
+    min-height: min-content;
+    height: 80%;
+    .card-header{
+    .name {
+        display: inline-block;
+        width: 60%;
+
+    }
+    .subject{
+        display : inline-block;
+        background-color: #ff0000;
+        border-radius: 20px;
+        color: #ffffff;
+        padding: 0.5rem;
+    }
+    }
+    .card-footer {
+        .date{
+            color:#414040 ;
+            font-weight: lighter;
+            font-size: 0.7rem;
+            
+        }
+    }
+
+}

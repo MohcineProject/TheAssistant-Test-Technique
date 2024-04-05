@@ -1,13 +1,19 @@
 <div class="card">
 
 <div class="card-header">
-</div>
+    <h3 class = "name">{{person.firstName + person.lastName}}</h3>
+    <div>
+        <span [ngStyle]="{'background-color': getColorForItem(person.isTeacher ? person.assignment : person.house)}" class="subject">
+          {{ person.isTeacher ? person.assignment : person.house }}
+        </span>
+      </div>
+      </div>
 <div class="card-body">
-    
+    <p class = "description"> {{person.description}} </p>
 </div>
 
 <div class="card-footer">
-
+    <i class="fa-solid fa-calendar"></i> <span class="date"> {{person.arrivalDate}} </span>
 </div>
 
 </div>
