@@ -28,11 +28,11 @@ To deploy the application locally, follow these steps:
     npx ng serve
     ```
 
-    This command uses the angular-cli installed in the `node_modules` directory as dependency 
+    This command uses the angular-cli installed in the `node_modules` directory as a dependency 
     of the project.
 
 ### Accessing the Application
 
-The app will run on a localhost server `http://localhost:4200` you can modify code and veiw changes as they are applied automatically. 
+The app will run on a localhost server `http://localhost:4200` you can modify code and view changes as they are applied automatically. 
 
 
