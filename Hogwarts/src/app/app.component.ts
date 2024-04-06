@@ -32,7 +32,7 @@ export class AppComponent {
         this.teachers = this.persons.filter((person) => person.isTeacher);
         this.students = this.persons.filter((person) => !person.isTeacher);
 
-        // Sort teachers by arrival date
+        // Sorting teachers and students 
         this.teachers.sort((a, b) => {
           const dateA = new Date(a.arrivalDate);
           const dateB = new Date(b.arrivalDate);
@@ -46,6 +46,8 @@ export class AppComponent {
             return a.firstName > b.firstName ? 1 : -1;
           }
         });
+
+        //Using the dates to generate the year of the students
         this.students.forEach ((student) => {
           const suffixes = ["First Year", "Second Year", "Third Year"] ;
           const arrival = new Date(student.arrivalDate) ; 
@@ -54,9 +56,10 @@ export class AppComponent {
           student.arrivalDate = (difference) <= 2  ? suffixes[difference] : "Graduated" ; 
 
         })
-        
-
-        console.log(this.teachers);
+        this.teachers.forEach(teacher => {
+          const arrivalDate = new Date(teacher.arrivalDate) ; 
+          teacher.arrivalDate =  (arrivalDate.getMonth() + 1).toString().padStart(2, '0') + "." + arrivalDate.getDate().toString().padStart(2, '0') + "."  + arrivalDate.getFullYear() ; 
+        } ) ; 
       }
     );
   }
